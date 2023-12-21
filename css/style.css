@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.bg-color{
+    background-color: rgba(249,230,223,255);
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 350px) {
+    .boton{
+        width: 15rem;
+        margin: .2rem;
+        font-size: 1.05rem;
+        padding: 1rem 0 1rem 0; 
+    }
+    .icono-check{
+        font-size: 8rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}
