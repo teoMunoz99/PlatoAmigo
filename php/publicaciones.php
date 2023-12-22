@@ -47,7 +47,8 @@ require_once 'encabezado.php';
                             </ul>
                         </div>
                         <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>
+                            <a href="#" class="btn btn-primary"><i class="bi bi-chevron-right"></i></a>
+                            <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>-->
                             <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
                         </div>
                     </div>
