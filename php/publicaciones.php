@@ -10,6 +10,22 @@ require_once 'encabezado.php';
         <?php require_once 'navbar.php'; ?>
     </header>
     <main class='container'>
+        <!--Carousel-->
+        <section class='border'>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-5 h-25">
+                    <div class="carousel-item active">
+                        <img src="../img/ayuda6.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/ayuda1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/ayuda4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Seleccionar region-->
         <section>
             <form class="" action="" method="post">
