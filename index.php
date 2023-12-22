@@ -5,7 +5,7 @@ require_once 'php/encabezado.php';
 ?>
 
 <body class='bg-color'>
-    <main class="d-flex justify-content-center align-items-end flex-column mb-3">
+    <main class="d-flex justify-content-center align-items-end flex-column">
         <section class=''>
             <!--Titulo-->
             <section class="d-flex justify-content-center align-items-center">
