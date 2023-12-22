@@ -6,10 +6,14 @@ require_once 'php/encabezado.php';
 
 <body class='bg-color'>
     <main class="d-flex justify-content-center align-items-end flex-column mb-3">
-        <section>
+        <section class=''>
+            <!--Titulo-->
+            <section class="d-flex justify-content-center align-items-center">
+                <h1 class='fw-bold'><i class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
+            </section>
             <!--Banner bienvenida-->
-            <article class="">
-                <img class="img-fluid" src="img/7853929.jpg" alt="ilustracion de un chef">
+            <article class="d-flex justify-content-center align-items-center">
+                <img class="img-fluid w-75" src="img/7853929.jpg" alt="ilustracion de un chef">
             </article>
             <!--texto-->
             <article class="text-center container">
