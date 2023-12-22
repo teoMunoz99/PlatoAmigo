@@ -1,7 +1,7 @@
 <?php
 $ruta = '../';
-//$color = '#0D6EFD';
-$color = '#f9e6df';
+$color = '#0d6efd';
+//$color = '#f9e6df';
 require_once 'encabezado.php';
 ?>
 
@@ -16,7 +16,7 @@ require_once 'encabezado.php';
                 <fieldset>
                     <div class="mb-3">
                         <label for="ubi">Eliga una zona</label>
-                        <select class="form-select" id="ubi" name="zona" aria-label="Default select example">
+                        <select class="form-select rounded-5" id="ubi" name="zona" aria-label="Default select example">
                             <option selected>--Seleccionar--</option>
                             <option value="1">San Miguel de Tucumán</option>
                             <option value="2">Yerba Buena</option>
@@ -25,17 +25,17 @@ require_once 'encabezado.php';
                     </div>
                 </fieldset>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary">Buscar</button>
+                    <button type="submit" class="btn btn-primary rounded-5">Buscar</button>
                 </div>
             </form>
         </section>
         <section class=''>
-            <h4 class="fw-bold">Platos disponibles</h4>
+            <h4 class="fw-bold">Platos disponibles:</h4>
             <!--Publicaciones-->
             <section>
-                <article class="card rounded-4 my-3 p-1">
+                <article class="card rounded-5 p-2">
                     <div class="card-body d-flex">
-                        <div class='w-100  me-3'>
+                        <div class='w-100'>
                             <h5 class="card-title">Empanadas de carne</h5>
                             <p class="card-text">1/2 docena de empanadas de carne. Deliciosas y muy ricas listas para
                                 buscar rapido antes de que se las caguen comiendo</p>
@@ -47,80 +47,8 @@ require_once 'encabezado.php';
                             </ul>
                         </div>
                         <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-chevron-right"></i></a>
+                            <a href="#" class="btn btn-primary rounded-5"><i class="bi bi-chevron-right"></i></a>
                             <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>-->
-                            <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
-                        </div>
-                    </div>
-                </article>
-                <article class="card my-3">
-                    <div class="card-body d-flex">
-                        <div class='w-100  me-3'>
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
-                        </div>
-                        <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>
-                            <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
-                        </div>
-                    </div>
-                </article>
-                <article class="card my-3">
-                    <div class="card-body d-flex">
-                        <div class='w-100  me-3'>
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
-                        </div>
-                        <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>
-                            <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
-                        </div>
-                    </div>
-                </article>
-                <article class="card my-3">
-                    <div class="card-body d-flex">
-                        <div class='w-100  me-3'>
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
-                        </div>
-                        <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>
-                            <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
-                        </div>
-                    </div>
-                </article>
-                <article class="card my-3">
-                    <div class="card-body d-flex">
-                        <div class='w-100  me-3'>
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
-                            </p>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
-                        </div>
-                        <div class='d-flex align-items-start'>
-                            <a href="#" class="btn btn-primary"><i class="bi bi-three-dots-vertical"></i></a>
                             <!--<a href="#" class="btn btn-primary"><i class="bi bi-three-dots"></i></a>-->
                         </div>
                     </div>
