@@ -1,5 +1,6 @@
 <?php
 $ruta = '../';
+$color = '#f9e6df';
 require_once 'encabezado.php';
 ?>
 
@@ -58,7 +59,6 @@ require_once 'encabezado.php';
             </article>
         </section>
     </main>
-</body>
 <?php
 require_once 'pie.php';
 ?>

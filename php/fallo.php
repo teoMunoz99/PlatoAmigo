@@ -1,5 +1,6 @@
 <?php
 $ruta = '../';
+$color = '#f9e6df';
 require_once 'encabezado.php';
 ?>
 <body class="bg-color">
