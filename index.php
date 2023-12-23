@@ -1,16 +1,15 @@
 <?php
 $ruta = '';
-$color = '#f9e6df';
+//$color = '#f9e6df';
+$color = '#0d6efd';
 require_once 'php/encabezado.php';
 ?>
 
 <body class='bg-color'>
-    <main class="d-flex justify-content-center align-items-end flex-column">
-        <section class=''>
-            <!--Titulo-->
-            <section class="d-flex justify-content-center align-items-center">
-                <h1 class='fw-bold'><i class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
-            </section>
+    <main class="d-flex flex-column">
+        <!--Titulo-->
+        <h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
+        <section class='flex-grow-1 d-flex flex-column justify-content-center'>
             <!--Banner bienvenida-->
             <article class="d-flex justify-content-center align-items-center">
                 <img class="img-fluid w-75" src="img/7853929.jpg" alt="ilustracion de un chef">
