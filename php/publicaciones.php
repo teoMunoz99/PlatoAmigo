@@ -13,7 +13,8 @@ require_once 'encabezado.php';
         <!--Buscador-->
         <section class='my-2'>
             <form class="d-flex" role="search">
-                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn btn-outline-success  rounded-pill" type="submit">Search</button>
             </form>
         </section>
@@ -24,12 +25,29 @@ require_once 'encabezado.php';
             <a class='btn btn-primary btn-p m-1 rounded-4'></a>
             <a class='btn btn-primary btn-p m-1 rounded-4'></a>
         </section>
+        <!--Banner-->
+        <section>
+            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/bannerPublicaciones/pobreza_infantil.jpg" class="d-block w-100 rounded-5" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="d-block w-100 rounded-5" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="d-block w-100 rounded-5" alt="...">
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Seleccionar region-->
         <section>
             <form class="d-flex" action="" method="post">
                 <fieldset>
                     <div class="me-2">
-                        <select class="form-select rounded-pill py-3" id="ubi" name="zona" aria-label="Default select example">
+                        <select class="form-select rounded-pill py-3" id="ubi" name="zona"
+                            aria-label="Default select example">
                             <option selected>--Seleccionar--</option>
                             <option value="1">San Miguel de Tucumán</option>
                             <option value="2">Yerba Buena</option>
