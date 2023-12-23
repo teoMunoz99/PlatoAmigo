@@ -10,8 +10,15 @@ require_once 'encabezado.php';
         <?php require_once 'navbar.php'; ?>
     </header>
     <main class='container'>
+        <!--Buscador-->
+        <section class='my-2'>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success  rounded-pill" type="submit">Search</button>
+            </form>
+        </section>
         <!--Carousel-->
-        <section class='border'>
+        <!--<section class='border'>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-5 h-25">
                     <div class="carousel-item active">
@@ -25,14 +32,13 @@ require_once 'encabezado.php';
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!--Seleccionar region-->
         <section>
-            <form class="" action="" method="post">
+            <form class="d-flex" action="" method="post">
                 <fieldset>
-                    <div class="mb-3">
-                        <label for="ubi">Eliga una zona</label>
-                        <select class="form-select rounded-5" id="ubi" name="zona" aria-label="Default select example">
+                    <div class="me-2">
+                        <select class="form-select rounded-pill py-3" id="ubi" name="zona" aria-label="Default select example">
                             <option selected>--Seleccionar--</option>
                             <option value="1">San Miguel de Tucumán</option>
                             <option value="2">Yerba Buena</option>
@@ -40,9 +46,7 @@ require_once 'encabezado.php';
                         </select>
                     </div>
                 </fieldset>
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary rounded-5">Buscar</button>
-                </div>
+                <button type="submit" class="btn btn-primary rounded-pill">Buscar</button>
             </form>
         </section>
         <section class=''>

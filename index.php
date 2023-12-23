@@ -25,8 +25,8 @@ require_once 'php/encabezado.php';
             </article>
             <!--Botones-->
             <article class="d-flex flex-column justify-content-center align-items-center">
-                <a class="btn btn-primary rounded-pill boton" href="./php/publicaciones.php">Ver platos<i class="bi bi-arrow-right-short"></i></a>
-                <a class="btn btn-primary rounded-pill boton" href="php/registro.php">Registrarme</a>
+                <a class="btn btn-primary rounded-pill boton py-3" href="./php/publicaciones.php">Ver platos<i class="bi bi-arrow-right-short"></i></a>
+                <a class="btn btn-primary rounded-pill boton py-3" href="php/registro.php">Registrarme</a>
             </article>
         </section>
     </main>
