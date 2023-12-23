@@ -23,7 +23,6 @@ require_once 'encabezado.php';
             <a class='btn btn-primary btn-p m-1 rounded-4'></a>
             <a class='btn btn-primary btn-p m-1 rounded-4'></a>
             <a class='btn btn-primary btn-p m-1 rounded-4'></a>
-  
         </section>
         <!--Seleccionar region-->
         <section>
