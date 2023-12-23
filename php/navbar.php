@@ -1,4 +1,4 @@
-<nav class="navbar bg-primary py-3 rounded-3 rounded-top-0" data-bs-theme="dark">
+<nav class="navbar bg-primary py-3 rounded-4 rounded-top-0" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="publicaciones.php"><i class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
