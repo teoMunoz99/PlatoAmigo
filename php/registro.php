@@ -9,7 +9,7 @@ require_once 'encabezado.php';
         <section>
             <!--Banner bienvenida-->
             <article class="d-flex justify-content-center">
-                <img class="img-fluid w-75" src="../img/femaleChef.png" alt="ilustracion de un chef">
+                <img class="img-fluid w-75" src="../img/registro/femaleChef.png" alt="ilustracion de un chef">
             </article>
             <!--Texto bienvenida al registro-->
             <article class="text-center container">

@@ -12,7 +12,7 @@ require_once 'php/encabezado.php';
         <section class='flex-grow-1 d-flex flex-column justify-content-center'>
             <!--Banner bienvenida-->
             <article class="d-flex justify-content-center align-items-center">
-                <img class="img-fluid w-75" src="img/7853929.jpg" alt="ilustracion de un chef">
+                <img class="img-fluid w-75" src="img/index/7853929.jpg" alt="ilustracion de un chef">
             </article>
             <!--texto-->
             <article class="text-center container">
