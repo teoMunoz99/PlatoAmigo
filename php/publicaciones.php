@@ -11,7 +11,7 @@ require_once 'encabezado.php';
     </header>
     <main class='container'>
         <!--Buscador-->
-        <section class='my-2'>
+        <section class='mt-3'>
             <form class="d-flex" role="search">
                 <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Search"
                     aria-label="Search">
@@ -19,24 +19,51 @@ require_once 'encabezado.php';
             </form>
         </section>
         <!--Botones principales-->
-        <section class="d-flex justify-content-around flex-wrap">
-            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
+        <section class="d-flex justify-content-around flex-wrap mt-3">
+            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i class="bi bi-cup-hot-fill icono-btn"></i></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i class="bi bi-heart-fill icono-btn"></i></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i class="bi bi-clipboard2-heart-fill icono-btn"></i></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i class="bi bi-coin icono-btn"></i></a>
         </section>
         <!--Banner-->
-        <section>
+        <section class='mt-3'>
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/bannerPublicaciones/pobreza_infantil.jpg" class="d-block w-100 rounded-5" alt="...">
+                        <!--<img src="../img/bannerPublicaciones/pobreza_infantil.jpg" class="d-block w-100 rounded-5 img-fluid" alt="...">-->
+                        <div class="card text-bg-dark rounded-5 border-0">
+                            <img src="../img/bannerPublicaciones/pobreza_infantil.jpg"
+                                class="card-img img-fluid rounded-5 opacity-50" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">¡Dona y Cambia Vidas!</h5>
+                                <p class="card-text">Desde $60 alimentas esperanzas. Haz clic, dona y cambia vidas.</p>
+                                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="d-block w-100 rounded-5" alt="...">
+                        <div class="card text-bg-dark rounded-5 border-0">
+                            <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="card-img img-fluid rounded-5  opacity-50"
+                                alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Un Bocado, Un Gesto</h5>
+                                <p class="card-text">Cada bocado cuenta. Haz clic para unirte y
+                                    hacer pequeñas acciones con grandes impactos.</p>
+                                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="d-block w-100 rounded-5" alt="...">
+                        <div class="card text-bg-dark rounded-5 border-0">
+                            <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="card-img img-fluid rounded-5 opacity-50"
+                                alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Platos que Nutren Sueños</h5>
+                                <p class="card-text">Convierte un plato en un sueño cumplido.
+                                    Únete a nosotros y ayuda a alimentar el futuro.</p>
+                                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
