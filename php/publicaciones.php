@@ -17,22 +17,14 @@ require_once 'encabezado.php';
                 <button class="btn btn-outline-success  rounded-pill" type="submit">Search</button>
             </form>
         </section>
-        <!--Carousel-->
-        <!--<section class='border'>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner rounded-5 h-25">
-                    <div class="carousel-item active">
-                        <img src="../img/ayuda6.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/ayuda1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/ayuda4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-            </div>
-        </section>-->
+        <!--Botones principales-->
+        <section class="d-flex justify-content-around flex-wrap">
+            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
+            <a class='btn btn-primary btn-p m-1 rounded-4'></a>
+  
+        </section>
         <!--Seleccionar region-->
         <section>
             <form class="d-flex" action="" method="post">

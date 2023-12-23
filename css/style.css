@@ -14,6 +14,10 @@ main {
 .bg-color{
     background-color: rgba(249,230,223,255);
 }
+.invertir-color {
+    -webkit-filter: invert(100%);
+   filter: invert(100%);
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 350px) {
@@ -25,6 +29,11 @@ main {
     }
     .icono-check{
         font-size: 8rem;
+    }
+    .btn-p{
+        /*background-color: #0d6efd;*/
+        width: 4.5rem;
+        height: 4.5rem;   
     }
 }
 
