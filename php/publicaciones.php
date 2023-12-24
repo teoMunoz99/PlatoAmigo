@@ -54,14 +54,31 @@ require_once 'encabezado.php';
         </section>
         <!--Botones principales-->
         <section class="d-flex justify-content-around flex-wrap mt-3">
-            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i
-                    class="bi bi-cup-hot-fill icono-btn"></i></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i
-                    class="bi bi-heart-fill icono-btn"></i></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i
-                    class="bi bi-clipboard2-heart-fill icono-btn"></i></a>
-            <a class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'><i
-                    class="bi bi-coin icono-btn"></i></a>
+            <a href="" class='text-center text-decoration-none text-dark fw-bold'>
+                <div class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'>
+                    <!--<i class="bi bi-cup-hot-fill icono-btn"></i>-->
+                    <img src="../img/iconos-comida/fast-food.png" class="w-75 invertir-color" alt="">
+                </div>
+                Platos
+            </a>
+            <a href="" class='text-center text-decoration-none text-dark fw-bold'>
+                <div class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'>
+                    <i class="bi bi-heart-pulse-fill icono-btn"></i>
+                </div>
+                Ayudar
+            </a>
+            <a href="" class='text-center text-decoration-none text-dark fw-bold'>
+                <div class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'>
+                    <i class="bi bi-calendar-heart icono-btn"></i>
+                </div>
+                Eventos
+            </a>
+            <a href="" class='text-center text-decoration-none text-dark fw-bold'>
+                <div class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'>
+                    <i class="bi bi-coin icono-btn"></i>
+                </div>
+                Donar
+            </a>
         </section>
         <!--Titulo-->
         <h2 class='text-center fs-1 fw-bold mt-5'>Platos disponibles</h2>
