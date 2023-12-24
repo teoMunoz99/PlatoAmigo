@@ -38,10 +38,9 @@ require_once 'encabezado.php';
                         <div class="mb-3">
                             <label for="ubi">Localidad*</label>
                             <select class="form-select rounded-pill py-3" id="ubi" name="localidad" aria-label="Default select example">
-                                <option selected>--Seleccionar--</option>
                                 <option value="1">San Miguel de Tucumán</option>
                                 <option value="2">Yerba Buena</option>
-                                <option value="3">Three</option>
+                                <option value="3">Otro</option>
                             </select>
                         </div>
                         <div class="mb-3">
