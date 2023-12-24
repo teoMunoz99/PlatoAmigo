@@ -13,9 +13,8 @@ require_once 'encabezado.php';
         <!--Buscador-->
         <section class='mt-3'>
             <form class="d-flex" role="search">
-                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Search"
-                    aria-label="Search">
-                <button class="btn btn-outline-success  rounded-pill" type="submit">Search</button>
+                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success  rounded-pill" type="submit">Buscar</button>
             </form>
         </section>
         <!--Botones principales-->
@@ -30,11 +29,9 @@ require_once 'encabezado.php';
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <!--<img src="../img/bannerPublicaciones/pobreza_infantil.jpg" class="d-block w-100 rounded-5 img-fluid" alt="...">-->
                         <div class="card text-bg-dark rounded-5 border-0">
-                            <img src="../img/bannerPublicaciones/pobreza_infantil.jpg"
-                                class="card-img img-fluid rounded-5 opacity-50" alt="...">
-                            <div class="card-img-overlay">
+                            <img src="../img/bannerPublicaciones/pobreza_infantil.jpg" class="card-img img-fluid rounded-5 opacity-50" alt="...">
+                            <div class="card-img-overlay p-4">
                                 <h5 class="card-title">¡Dona y Cambia Vidas!</h5>
                                 <p class="card-text">Desde $60 alimentas esperanzas. Haz clic, dona y cambia vidas.</p>
                                 <p class="card-text"><small>Last updated 3 mins ago</small></p>
@@ -43,9 +40,8 @@ require_once 'encabezado.php';
                     </div>
                     <div class="carousel-item">
                         <div class="card text-bg-dark rounded-5 border-0">
-                            <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="card-img img-fluid rounded-5  opacity-50"
-                                alt="...">
-                            <div class="card-img-overlay">
+                            <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="card-img img-fluid rounded-5  opacity-50" alt="...">
+                            <div class="card-img-overlay p-4">
                                 <h5 class="card-title">Un Bocado, Un Gesto</h5>
                                 <p class="card-text">Cada bocado cuenta. Haz clic para unirte y
                                     hacer pequeñas acciones con grandes impactos.</p>
@@ -55,9 +51,8 @@ require_once 'encabezado.php';
                     </div>
                     <div class="carousel-item">
                         <div class="card text-bg-dark rounded-5 border-0">
-                            <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="card-img img-fluid rounded-5 opacity-50"
-                                alt="...">
-                            <div class="card-img-overlay">
+                            <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="card-img img-fluid rounded-5 opacity-50" alt="...">
+                            <div class="card-img-overlay p-4">
                                 <h5 class="card-title">Platos que Nutren Sueños</h5>
                                 <p class="card-text">Convierte un plato en un sueño cumplido.
                                     Únete a nosotros y ayuda a alimentar el futuro.</p>
@@ -68,13 +63,14 @@ require_once 'encabezado.php';
                 </div>
             </div>
         </section>
+        <h2 class='text-center fs-1 fw-bold mt-3'>Platos disponibles</h2>
         <!--Seleccionar region-->
-        <section>
+        <section class='mt-3'>
+            <h4 class="fw-bold">Filtrar por ubicacion:</h4>
             <form class="d-flex" action="" method="post">
                 <fieldset>
                     <div class="me-2">
-                        <select class="form-select rounded-pill py-3" id="ubi" name="zona"
-                            aria-label="Default select example">
+                        <select class="form-select rounded-pill py-3" id="ubi" name="zona" aria-label="Default select example">
                             <option selected>--Seleccionar--</option>
                             <option value="1">San Miguel de Tucumán</option>
                             <option value="2">Yerba Buena</option>
@@ -85,8 +81,7 @@ require_once 'encabezado.php';
                 <button type="submit" class="btn btn-primary rounded-pill">Buscar</button>
             </form>
         </section>
-        <section class=''>
-            <h4 class="fw-bold">Platos disponibles:</h4>
+        <section class='mt-3'>
             <!--Publicaciones-->
             <section>
                 <article class="card rounded-5 p-2">
