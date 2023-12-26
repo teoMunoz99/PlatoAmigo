@@ -11,24 +11,13 @@
                     <a class="nav-link active" aria-current="page" href="publicaciones.php">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mi Perfil</a>
+                    <a class="nav-link" href="error404.php">Mi Perfil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="registro.php">Registrarme</a>
                 </li>
-                <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link" href="error404.php">¿Quiénes somos?</a>
                 </li>
             </ul>
         </div>
