@@ -8,8 +8,8 @@ require_once 'php/encabezado.php';
 <body class='bg-color'>
     <main class="d-flex flex-column">
         <!--Titulo-->
-        <h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i
-                class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
+        <a href="index.php" class='text-decoration-none'><h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i
+                class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1></a>
         <section class='flex-grow-1 d-flex flex-column justify-content-around'>
             <!--Banner bienvenida-->
             <article class="d-flex justify-content-center align-items-center">
