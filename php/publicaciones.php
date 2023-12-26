@@ -21,7 +21,9 @@ require_once 'encabezado.php';
                             <div class="card-img-overlay p-4">
                                 <h5 class="card-title">¡Dona y Cambia Vidas!</h5>
                                 <p class="card-text">Desde $60 alimentas esperanzas. Haz clic, dona y cambia vidas.</p>
-                                <a href="error404.php" class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar ahora!</small></a>
+                                <a href="error404.php"
+                                    class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar
+                                        ahora!</small></a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +35,9 @@ require_once 'encabezado.php';
                                 <h5 class="card-title">Un Bocado, Un Gesto</h5>
                                 <p class="card-text">Cada bocado cuenta. Haz clic para unirte y
                                     hacer pequeñas acciones con grandes impactos.</p>
-                                    <a href="error404.php" class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar ahora!</small></a>
+                                <a href="error404.php"
+                                    class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar
+                                        ahora!</small></a>
                             </div>
                         </div>
                     </div>
@@ -45,7 +49,9 @@ require_once 'encabezado.php';
                                 <h5 class="card-title">Platos que Nutren Sueños</h5>
                                 <p class="card-text">Convierte un plato en un sueño cumplido.
                                     Únete a nosotros y ayuda a alimentar el futuro.</p>
-                                <a href="error404.php" class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar ahora!</small></a>
+                                <a href="error404.php"
+                                    class="card-text text-light text-decoration-none btn btn-danger rounded-pill fw-bold"><small>¡Donar
+                                        ahora!</small></a>
                             </div>
                         </div>
                     </div>
@@ -79,17 +85,23 @@ require_once 'encabezado.php';
                 Donar
             </a>
         </section>
-        <!--Titulo-->
-        <h2 class='text-center fs-1 fw-bold mt-5'>Platos disponibles</h2>
-        <!--Buscador-->
+        <!--Objetivo semanal-->
         <section class='mt-3'>
-            <form class="d-flex" action="error404.php" method="get" role="search">
-                <input class="form-control me-2 rounded-pill py-3" type="search" placeholder="Buscar"
-                    aria-label="Search">
-                <button class="btn btn-outline-success  rounded-pill" type="submit">Buscar</button>
-            </form>
+            <article class='bg-light p-3 rounded-5'>
+                <h5 class='fw-bold'>Objetivo semanal: </h5>
+                <p>Donar 10 platos</p>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" style="width: 35%">35%</div>
+                </div>
+                <div class='text-end'>
+                    <a href="error404.php" class='btn btn-danger rounded-pill mt-3'>Ayudar!</a>
+                </div>
+            </article>
         </section>
-        <!--Seleccionar region-->
+        <!--Titulo-->
+        <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
+        <!--Filtros-->
         <section class='mt-3'>
             <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
             <form class="d-flex" action="error404.php" method="get">
@@ -103,7 +115,7 @@ require_once 'encabezado.php';
                         </select>
                     </div>
                 </fieldset>
-                <button type="submit" class="btn btn-primary rounded-pill">Buscar</button>
+                <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
             </form>
         </section>
         <section class='mt-4'>
@@ -123,7 +135,8 @@ require_once 'encabezado.php';
                             </ul>
                         </div>
                         <div class='d-flex align-items-start'>
-                            <a href="error404.php" class="btn btn-primary rounded-5"><i class="bi bi-chevron-right"></i></a>
+                            <a href="error404.php" class="btn btn-primary rounded-5"><i
+                                    class="bi bi-chevron-right"></i></a>
                         </div>
                     </div>
                 </article>

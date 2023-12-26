@@ -38,6 +38,9 @@ main {
         width: 4.5rem;
         height: 4.5rem;   
     }
+    .barra-progreso{
+        width: 5rem;
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
