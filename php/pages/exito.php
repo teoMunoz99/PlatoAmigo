@@ -1,7 +1,7 @@
 <?php
-$ruta = '../';
+$ruta = '../../';
 $color = '#f9e6df';
-require_once 'encabezado.php';
+require_once 'components/encabezado.php';
 ?>
 <body class="bg-color">
     <main class="d-flex justify-content-center align-items-center container">
@@ -13,5 +13,5 @@ require_once 'encabezado.php';
     </main>
 </body>
 <?php
-include 'pie.php';
+include 'components/pie.php';
 ?>

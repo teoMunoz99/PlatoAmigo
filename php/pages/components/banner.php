@@ -2,7 +2,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="card text-bg-dark rounded-5 border-0">
-                <img src="../img/bannerPublicaciones/pobreza_infantil.jpg"
+                <img src="../../img/bannerPublicaciones/pobreza_infantil.jpg"
                     class="card-img img-fluid rounded-5 opacity-50" alt="...">
                 <div class="card-img-overlay p-4">
                     <h5 class="card-title">¡Dona y Cambia Vidas!</h5>
@@ -15,7 +15,7 @@
         </div>
         <div class="carousel-item">
             <div class="card text-bg-dark rounded-5 border-0">
-                <img src="../img/bannerPublicaciones/hombre-calle.jpg" class="card-img img-fluid rounded-5  opacity-50"
+                <img src="../../img/bannerPublicaciones/hombre-calle.jpg" class="card-img img-fluid rounded-5  opacity-50"
                     alt="...">
                 <div class="card-img-overlay p-4">
                     <h5 class="card-title">Un Bocado, Un Gesto</h5>
@@ -29,7 +29,7 @@
         </div>
         <div class="carousel-item">
             <div class="card text-bg-dark rounded-5 border-0">
-                <img src="../img/bannerPublicaciones/hombre-basura.jpg" class="card-img img-fluid rounded-5 opacity-50"
+                <img src="../../img/bannerPublicaciones/hombre-basura.jpg" class="card-img img-fluid rounded-5 opacity-50"
                     alt="...">
                 <div class="card-img-overlay p-4">
                     <h5 class="card-title">Platos que Nutren Sueños</h5>

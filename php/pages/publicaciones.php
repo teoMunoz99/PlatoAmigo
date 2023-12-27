@@ -1,33 +1,33 @@
 <?php
-$ruta = '../';
+$ruta = '../../';
 $color = '#0d6efd';
 //$color = '#f9e6df';
-require_once 'encabezado.php';
+require_once 'components/encabezado.php';
 ?>
 
 <body class='bg-color'>
     <header>
-        <?php require_once 'pages/components/navbar.php'; ?>
+        <?php require_once 'components/navbar.php'; ?>
     </header>
     <main class='container'>
         <!--Banner-->
         <section class='mt-3'>
-            <?php require_once './pages/components/banner.php';?>
+            <?php require_once 'components/banner.php';?>
         </section>
         <!--Botones principales-->
         <section class="mt-3">
-            <?php require_once './pages/components/botonesPrincipales.php';?>
+            <?php require_once 'components/botonesPrincipales.php';?>
         </section>
         <!--Objetivo semanal-->
         <section class='mt-3'>
-            <?php require_once './pages/components/objetivosSemanales.php';?>
+            <?php require_once 'components/objetivosSemanales.php';?>
         </section>
         <!--Titulo-->
         <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
         <!--Filtros-->
         <section class='mt-3'>
             <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
-            <form class="d-flex" action="error404.php" method="get">
+            <form class="d-flex" action="" method="get">
                 <fieldset>
                     <div class="me-2">
                         <select class="form-select rounded-pill py-3" id="ubi" name="zona"
@@ -44,10 +44,10 @@ require_once 'encabezado.php';
         <section class='mt-4'>
             <!--Publicaciones-->
             <section>
-                <?php require_once './pages/components/cardPlatos.php';?>
+                <?php require_once 'components/cardPlatos.php';?>
             </section>
         </section>
     </main>
     <?php
-    require_once 'pie.php';
+    require_once 'components/pie.php';
     ?>
