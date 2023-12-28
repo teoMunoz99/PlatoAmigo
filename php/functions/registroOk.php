@@ -11,10 +11,11 @@ if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['lo
         $localidad = $_POST['localidad'];
         $cel = $_POST['telefono'];
         $email = $_POST['email'];
-        $pass = $_POST['password'];
-        $consulta = 'INSERT INTO locales(nombre, direccion, localidad, cel, correo, pass) VALUES(?,?,?,?,?,?)';
+        $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $tipo = 'C';
+        $consulta = 'INSERT INTO locales(nombre, direccion, localidad, cel, correo, pass, tipo) VALUES(?,?,?,?,?,?,?)';
         $sentencia = mysqli_prepare($conexion, $consulta);
-        mysqli_stmt_bind_param($sentencia, 'ssssss', $nombre, $direccion, $localidad, $cel, $email, $pass);
+        mysqli_stmt_bind_param($sentencia, 'sssssss', $nombre, $direccion, $localidad, $cel, $email, $pass, $tipo);
         $q = mysqli_stmt_execute($sentencia);
         if ($q) {
             header('refresh:1;url=../pages/publicaciones.php');
