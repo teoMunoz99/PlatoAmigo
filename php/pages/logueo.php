@@ -1,4 +1,5 @@
 <?php
+session_start();
 $ruta = '../../';
 $color = '#0d6efd';
 require_once 'components/encabezado.php';
@@ -28,6 +29,11 @@ require_once 'components/encabezado.php';
                 <form class="bg-light border rounded-5 p-3" action="../functions/logueoOk.php" method="post">
                     <fieldset>
                         <legend class="text-center mb-4 fw-bold">Iniciar sesión</legend>
+                        <?php
+                            if(isset($_SESSION['error_msj'])){
+                                echo '<p class="text-danger">'.$_SESSION['error_msj'].'</p>';
+                            }
+                        ?>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
                             <input type="email" class="form-control rounded-pill py-3" name="email"
