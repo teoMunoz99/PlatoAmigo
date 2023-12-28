@@ -30,25 +30,42 @@ require_once 'components/encabezado.php';
         </section>
         <!--Titulo-->
         <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
-        <!--Filtros-->
-        <section class='mt-3'>
-            <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
-            <form class="d-flex" action="" method="get">
-                <fieldset>
-                    <div class="me-2">
-                        <select class="form-select rounded-pill py-3" id="ubi" name="zona"
-                            aria-label="Default select example">
-                            <option value="1">San Miguel de Tucumán</option>
-                            <option value="2">Yerba Buena</option>
-                            <option value="3">Three</option>
-                        </select>
+        <!--Filtros (no mostrar si esta logueado)-->
+        <?php
+        if (!isset($_SESSION['user'])) {
+            ?>
+            <section class='mt-3'>
+                <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
+                <form class="d-flex" action="" method="get">
+                    <fieldset>
+                        <div class="me-2">
+                            <select class="form-select rounded-pill py-3" id="ubi" name="zona"
+                                aria-label="Default select example">
+                                <option value="1">San Miguel de Tucumán</option>
+                                <option value="2">Yerba Buena</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
+                </form>
+            </section>
+        <?php } ?>
+        <!--Agregar platos-->
+        <?php
+        if (isset($_SESSION['user'])) {
+            ?>
+            <section class="d-flex justify-content-center mt-3">
+                <a href="error404.php" class='text-center text-decoration-none text-dark fw-bold'>
+                    <div class='btn btn-success m-1 btn-p rounded-4 d-flex justify-content-center align-items-center'>
+                        <i class="bi bi-plus icono-btn"></i>
                     </div>
-                </fieldset>
-                <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
-            </form>
-        </section>
+                    Agregar
+                </a>
+            </section>
+        <?php } ?>
+        <!--Publicaciones-->
         <section class='mt-4'>
-            <!--Publicaciones-->
             <section>
                 <?php require_once 'components/cardPlatos.php'; ?>
             </section>
