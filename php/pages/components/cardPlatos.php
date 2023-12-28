@@ -12,7 +12,7 @@
             </ul>
         </div>
         <div class='d-flex align-items-start'>
-            <a href="error404.php" class="btn btn-primary rounded-5"><i class="bi bi-chevron-right"></i></a>
+            <a href="error404.php" class=""><i class="bi bi-x-circle-fill fs-1 text-danger"></i></a>
         </div>
     </div>
 </article>
