@@ -20,7 +20,7 @@ main {
 }
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 350px) {
+@media (min-width: 280px) {
     .boton{
         width: 15rem;
         margin: .2rem;
