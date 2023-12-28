@@ -15,31 +15,28 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         if ($q) {
             mysqli_stmt_store_result($sentencia);  // Almacena el resultado para poder usar mysqli_stmt_num_rows
             $num_rows = mysqli_stmt_num_rows($sentencia);
-
+            //si num_rows es mayor a 0 significa que encontro una cuenta con ese email
             if ($num_rows > 0) {
                 mysqli_stmt_bind_result($sentencia, $email, $pass);
                 mysqli_stmt_fetch($sentencia);
+                desconectar($conexion);
                 //en caso de encontrar el email, verifico la contraseña
                 if (password_verify($contra, $pass)) {
                     //las contraseñas coinciden
-                    //header('refresh:0;url=../pages/publicaciones.php');
-                    echo 'contra correcta';
+                    header('refresh:0;url=../pages/publicaciones.php');
                 } else {
                     //contraseña incorrecta
-                    //header('refresh:0;url=../pages/logueo.php');
-                    echo 'contra incorrecta';
+                    header('refresh:0;url=../pages/logueo.php');
                 }
             } else {
                 //no se encontró el email
-                //header('refresh:0;url=../pages/logueo.php');
-                echo 'el mail no está';
+                header('refresh:0;url=../pages/logueo.php');
             }
         } else {
             //fallo al realizar la consulta
-            echo 'fallo al realizar la consulta';
+            header('refresh:1;url=../pages/logueo.php');
+            include '../pages/fallo.php';
         }
-
-        desconectar($conexion);
     } else {
         //no se realizó la conexión a la db
         header('refresh:0;url=../pages/fallo.php');

@@ -12,7 +12,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['lo
         $cel = $_POST['telefono'];
         $email = $_POST['email'];
         $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $tipo = 'C';
+        $tipo = 'L'; //tipo L de local
         $consulta = 'INSERT INTO locales(nombre, direccion, localidad, cel, correo, pass, tipo) VALUES(?,?,?,?,?,?,?)';
         $sentencia = mysqli_prepare($conexion, $consulta);
         mysqli_stmt_bind_param($sentencia, 'sssssss', $nombre, $direccion, $localidad, $cel, $email, $pass, $tipo);
