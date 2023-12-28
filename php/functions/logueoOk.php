@@ -9,7 +9,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $correo = $_POST['email'];
         $contra = trim($_POST['password']);
         //busco el email en la db
-        $consulta = 'SELECT nombre, correo, pass FROM locales WHERE correo = ?';
+        $consulta = 'SELECT nombre, correo, pass, tipo FROM locales WHERE correo = ?';
         $sentencia = mysqli_prepare($conexion, $consulta);
         mysqli_stmt_bind_param($sentencia, 's', $correo);
         $q = mysqli_stmt_execute($sentencia);
@@ -18,13 +18,14 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
             $num_rows = mysqli_stmt_num_rows($sentencia);
             //si num_rows es mayor a 0 significa que encontro una cuenta con ese email
             if ($num_rows > 0) {
-                mysqli_stmt_bind_result($sentencia, $nombre, $email, $pass);
+                mysqli_stmt_bind_result($sentencia, $nombre, $email, $pass, $tipo);
                 mysqli_stmt_fetch($sentencia);
                 desconectar($conexion);
                 //en caso de encontrar el email, verifico la contraseña
                 if (password_verify($contra, $pass)) {
                     //las contraseñas coinciden
                     $_SESSION['user'] = $nombre;
+                    $_SESSION['tipo'] = $tipo;
                     header('refresh:0;url=../pages/publicaciones.php');
                 } else {
                     //contraseña incorrecta

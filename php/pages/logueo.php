@@ -1,5 +1,9 @@
 <?php
 session_start();
+//verifico si es que el usuario ya esta logueado
+if(isset($_SESSION['user'])){
+    header('refresh:0;url=publicaciones.php');
+}
 $ruta = '../../';
 $color = '#0d6efd';
 require_once 'components/encabezado.php';

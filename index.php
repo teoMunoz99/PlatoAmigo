@@ -1,4 +1,5 @@
 <?php
+session_start();
 $ruta = '';
 //$color = '#f9e6df';
 $color = '#0d6efd';

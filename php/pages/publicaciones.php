@@ -10,17 +10,23 @@ require_once 'components/encabezado.php';
         <?php require_once 'components/navbar.php'; ?>
     </header>
     <main class='container'>
+        <!--Saludo de usuario-->
+        <?php
+        if (isset($_SESSION['user'])) {
+            echo 'Hola: ' . $_SESSION['user'] . '';
+        }
+        ?>
         <!--Banner-->
         <section class='mt-3'>
-            <?php require_once 'components/banner.php';?>
+            <?php require_once 'components/banner.php'; ?>
         </section>
         <!--Botones principales-->
         <section class="mt-3">
-            <?php require_once 'components/botonesPrincipales.php';?>
+            <?php require_once 'components/botonesPrincipales.php'; ?>
         </section>
         <!--Objetivo semanal-->
         <section class='mt-3'>
-            <?php require_once 'components/objetivosSemanales.php';?>
+            <?php require_once 'components/objetivosSemanales.php'; ?>
         </section>
         <!--Titulo-->
         <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
@@ -44,7 +50,7 @@ require_once 'components/encabezado.php';
         <section class='mt-4'>
             <!--Publicaciones-->
             <section>
-                <?php require_once 'components/cardPlatos.php';?>
+                <?php require_once 'components/cardPlatos.php'; ?>
             </section>
         </section>
     </main>
