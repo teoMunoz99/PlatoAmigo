@@ -24,6 +24,10 @@ require_once 'components/encabezado.php';
                     Regístrate y haz del compartir comida una experiencia que cambia vidas.
                 </p>
             </article>
+            <!--Loguin-->
+            <article class="text-center mb-3">
+                <p class='text-secondary'>Ya estás registrado? <a href="logueo.php">Inicia sesión</a></p>
+            </article>
             <!--Formulario de registro-->
             <article class="container mb-4">
                 <form class="bg-light border rounded-5 p-3" action="../functions/registroOk.php" method="post">

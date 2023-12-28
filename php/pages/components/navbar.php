@@ -11,6 +11,9 @@
                     <a class="nav-link active" aria-current="page" href="publicaciones.php">Inicio</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="publicaciones.php">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="error404.php">Mi Perfil</a>
                 </li>
                 <li class="nav-item">

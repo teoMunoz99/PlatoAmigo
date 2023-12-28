@@ -18,9 +18,11 @@ if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['lo
         mysqli_stmt_bind_param($sentencia, 'sssssss', $nombre, $direccion, $localidad, $cel, $email, $pass, $tipo);
         $q = mysqli_stmt_execute($sentencia);
         if ($q) {
+            desconectar($conexion);
             header('refresh:1;url=../pages/publicaciones.php');
             require_once '../pages/exito.php';
         } else {
+            desconectar($conexion);
             header('refresh:1;url=../../index.php');
             require_once 'fallo.php';
         }
