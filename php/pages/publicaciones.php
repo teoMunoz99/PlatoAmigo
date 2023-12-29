@@ -56,7 +56,7 @@ require_once 'components/encabezado.php';
         if (isset($_SESSION['user'])) {
             ?>
             <section class="d-flex justify-content-center mt-3">
-                <a href="error404.php" class='text-center text-decoration-none text-dark fw-bold'>
+                <a href="agregarPlato.php" class='text-center text-decoration-none text-dark fw-bold'>
                     <div class='btn btn-success m-1 btn-p rounded-4 d-flex justify-content-center align-items-center'>
                         <i class="bi bi-plus icono-btn"></i>
                     </div>
