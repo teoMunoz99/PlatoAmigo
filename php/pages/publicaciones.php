@@ -85,7 +85,7 @@ require_once 'components/encabezado.php';
 
                     if ($cantidadP > 0) {
                         while (mysqli_stmt_fetch($sentenciaP)) {
-                            $consultaL = 'SELECT nombre, direccion, localidad FROM locales WHERE id_local = ?';
+                            $consultaL = 'SELECT nombre, direccion, localidad, tipo FROM locales WHERE id_local = ?';
                             $sentenciaL = mysqli_prepare($conexion, $consultaL);
 
                             mysqli_stmt_bind_param($sentenciaL, 'i', $id_localP);
@@ -97,16 +97,15 @@ require_once 'components/encabezado.php';
                                 $cantL = mysqli_stmt_num_rows($sentenciaL);
 
                                 if ($cantL > 0) {
-                                    mysqli_stmt_bind_result($sentenciaL, $nombreL, $direccionL, $localidadL);
+                                    mysqli_stmt_bind_result($sentenciaL, $nombreL, $direccionL, $localidadL, $tipo);
                                     mysqli_stmt_fetch($sentenciaL);
-
                                     include 'components/cardPlatos.php';
                                 }
 
                                 mysqli_stmt_free_result($sentenciaL);
                             }
                         }
-                    }else{
+                    } else {
                         echo '<p>No hay platos disponibles</p>';
                     }
 

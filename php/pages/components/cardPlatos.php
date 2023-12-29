@@ -10,7 +10,7 @@
                 <li class="list-group-item"><span class='text-secondary'>Hora:</span><?php echo $fecha; ?></li>
             </ul>
         </div>
-        <?php if($_SESSION['tipo'] == 'A'){ ?>
+        <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'A'){ ?>
         <div class='d-flex align-items-start'>
             <a href="error404.php" class=""><i class="bi bi-x-circle-fill fs-1 text-danger"></i></a>
         </div>
