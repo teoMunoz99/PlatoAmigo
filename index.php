@@ -9,8 +9,10 @@ require_once 'php/pages/components/encabezado.php';
 <body class='bg-color'>
     <main class="d-flex flex-column">
         <!--Titulo-->
-        <a href="index.php" class='text-decoration-none'><h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i
-                class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1></a>
+        <a href="index.php" class='text-decoration-none'>
+            <h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i
+                    class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
+        </a>
         <section class='flex-grow-1 d-flex flex-column justify-content-around'>
             <!--Banner bienvenida-->
             <article class="d-flex justify-content-center align-items-center">
@@ -29,6 +31,10 @@ require_once 'php/pages/components/encabezado.php';
                 <a class="btn btn-primary rounded-pill boton py-3" href="./php/pages/publicaciones.php">Ver platos<i
                         class="bi bi-arrow-right-short"></i></a>
                 <a class="btn btn-primary rounded-pill boton py-3" href="php/pages/registro.php">Registrarme</a>
+            </article>
+            <!--Loguin-->
+            <article class="text-center">
+                <p class='text-secondary'>Ya estás registrado? <a href="php/pages/logueo.php">Inicia sesión</a></p>
             </article>
         </section>
     </main>
