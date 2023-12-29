@@ -18,7 +18,7 @@ require_once 'components/encabezado.php';
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre del plato</label>
                         <input type="text" class="form-control rounded-pill py-3" name="nombrePlato" id="name"
-                            minlength="3" maxlength="15">
+                            minlength="3" maxlength="30">
                     </div>
                     <div class="mb-3">
                         <label class='form-label' for="floatingTextarea2">Descripción</label>
