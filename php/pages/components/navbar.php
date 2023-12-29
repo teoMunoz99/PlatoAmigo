@@ -21,7 +21,7 @@ if (isset($_SESSION['user'])) {
                 </li>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="error404.php">Mi Perfil</a>
+                        <a class="nav-link" href="miPerfil.php">Mi Perfil</a>
                     </li>
                 <?php } ?>
                 <?php if ($bandera) { ?>
