@@ -65,10 +65,60 @@ require_once 'components/encabezado.php';
             </section>
         <?php } ?>
         <!--Publicaciones-->
-        <section class='mt-4'>
-            <section>
-                <?php require_once 'components/cardPlatos.php'; ?>
-            </section>
+        <section class=''>
+            <?php
+            include '../functions/conexion.php';
+
+            $conexion = conectar();
+
+            if ($conexion) {
+                $consultaP = 'SELECT nombre, descripcion, fecha, id_localP FROM platos';
+                $sentenciaP = mysqli_prepare($conexion, $consultaP);
+
+                $qP = mysqli_stmt_execute($sentenciaP);
+
+                if ($qP) {
+                    mysqli_stmt_bind_result($sentenciaP, $nombreP, $descripcionP, $fecha, $id_localP);
+                    mysqli_stmt_store_result($sentenciaP);
+
+                    $cantidadP = mysqli_stmt_num_rows($sentenciaP);
+
+                    if ($cantidadP > 0) {
+                        while (mysqli_stmt_fetch($sentenciaP)) {
+                            $consultaL = 'SELECT nombre, direccion, localidad FROM locales WHERE id_local = ?';
+                            $sentenciaL = mysqli_prepare($conexion, $consultaL);
+
+                            mysqli_stmt_bind_param($sentenciaL, 'i', $id_localP);
+                            $qL = mysqli_stmt_execute($sentenciaL);
+
+                            if ($qL) {
+                                mysqli_stmt_store_result($sentenciaL);
+
+                                $cantL = mysqli_stmt_num_rows($sentenciaL);
+
+                                if ($cantL > 0) {
+                                    mysqli_stmt_bind_result($sentenciaL, $nombreL, $direccionL, $localidadL);
+                                    mysqli_stmt_fetch($sentenciaL);
+
+                                    include 'components/cardPlatos.php';
+                                }
+
+                                mysqli_stmt_free_result($sentenciaL);
+                            }
+                        }
+                    }else{
+                        echo '<p>No hay platos disponibles</p>';
+                    }
+
+                    mysqli_stmt_free_result($sentenciaP);
+                }
+
+                mysqli_close($conexion);
+            } else {
+                echo 'Error en la conexión a la base de datos';
+            }
+            ?>
+
         </section>
     </main>
     <?php

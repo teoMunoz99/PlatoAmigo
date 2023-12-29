@@ -1,14 +1,13 @@
-<article class="card rounded-5 p-2">
+<article class="card rounded-5 p-2 my-3">
     <div class="card-body d-flex">
         <div class='w-100 me-4'>
-            <h5 class="card-title">Empanadas de carne</h5>
-            <p class="card-text">1/2 docena de empanadas de carne. Deliciosas y muy ricas listas para
-                buscar rapido antes de que se las caguen comiendo</p>
+            <h5 class="card-title"><?php echo $nombreP; ?></h5>
+            <p class="card-text"><?php echo $descripcionP; ?></p>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><span class='text-secondary'>Local:</span> Mc Donalds</li>
-                <li class="list-group-item"><span class='text-secondary'>Direccion:</span> 25 de mayo
+                <li class="list-group-item"><span class='text-secondary'>Local:</span><?php echo $nombreL; ?></li>
+                <li class="list-group-item"><span class='text-secondary'>Direccion:</span> <?php echo $direccionL.', '.$localidadL; ?>
                 </li>
-                <li class="list-group-item"><span class='text-secondary'>Hora:</span> 21:35</li>
+                <li class="list-group-item"><span class='text-secondary'>Hora:</span><?php echo $fecha; ?></li>
             </ul>
         </div>
         <div class='d-flex align-items-start'>

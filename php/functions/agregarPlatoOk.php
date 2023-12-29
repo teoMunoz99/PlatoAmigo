@@ -16,6 +16,7 @@ if (!empty($_POST['nombrePlato']) && !empty($_POST['descripcion'])) {
         $sentencia = mysqli_prepare($conexion, $consulta);
         mysqli_stmt_bind_param($sentencia, 'sssi', $nombrePlato, $descripcion, $fecha, $id_localP);
         $q = mysqli_stmt_execute($sentencia);
+        desconectar($conexion);
         if ($q) {
             header("refresh:1;url=../pages/publicaciones.php");
             include '../pages/mensajes/cargaExitosa.php';
