@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['localidad']) && !empty($_POST['telefono']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 
     //guardo los datos en la bd
@@ -18,7 +19,13 @@ if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['lo
         mysqli_stmt_bind_param($sentencia, 'sssssss', $nombre, $direccion, $localidad, $cel, $email, $pass, $tipo);
         $q = mysqli_stmt_execute($sentencia);
         if ($q) {
+            // Obtener el ID del usuario recién creado
+            $id_local = mysqli_insert_id($conexion);
             desconectar($conexion);
+            //guardo los datos en variables de session
+            $_SESSION['user'] = $nombre;
+            $_SESSION['tipo'] = $tipo;
+            $_SESSION['id_local'] = $id_local;
             header('refresh:1;url=../pages/publicaciones.php');
             require_once '../pages/exito.php';
         } else {
