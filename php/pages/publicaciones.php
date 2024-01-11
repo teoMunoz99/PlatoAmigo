@@ -73,13 +73,13 @@ require_once 'components/encabezado.php';
             $conexion = conectar();
 
             if ($conexion) {
-                $consultaP = 'SELECT nombre, descripcion, fecha, id_localP FROM platos';
+                $consultaP = 'SELECT id_plato, nombre, descripcion, fecha, id_localP FROM platos';
                 $sentenciaP = mysqli_prepare($conexion, $consultaP);
 
                 $qP = mysqli_stmt_execute($sentenciaP);
 
                 if ($qP) {
-                    mysqli_stmt_bind_result($sentenciaP, $nombreP, $descripcionP, $fecha, $id_localP);
+                    mysqli_stmt_bind_result($sentenciaP, $id_plato, $nombreP, $descripcionP, $fecha, $id_localP);
                     mysqli_stmt_store_result($sentenciaP);
 
                     $cantidadP = mysqli_stmt_num_rows($sentenciaP);
