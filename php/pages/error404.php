@@ -1,6 +1,7 @@
 <?php
 $ruta = '../../';
 $color = '#f9e6df';
+$current_page = 'error404';
 require_once 'components/encabezado.php';
 ?>
 

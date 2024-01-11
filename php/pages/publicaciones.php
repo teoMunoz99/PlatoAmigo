@@ -2,6 +2,7 @@
 $ruta = '../../';
 $color = '#0d6efd';
 //$color = '#f9e6df';
+$current_page = 'publicaciones';
 require_once 'components/encabezado.php';
 ?>
 

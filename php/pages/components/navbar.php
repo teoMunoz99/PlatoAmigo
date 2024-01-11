@@ -17,25 +17,25 @@ if (isset($_SESSION['user'])) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="publicaciones.php">Inicio</a>
+                    <a class="nav-link <?php if($current_page === 'publicaciones')echo 'active';?>" aria-current="page" href="publicaciones.php">Inicio</a>
                 </li>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="miPerfil.php">Mi Perfil</a>
+                        <a class="nav-link <?php if($current_page === 'miPerfil') echo 'active'; ?>" href="miPerfil.php">Mi Perfil</a>
                     </li>
                 <?php } ?>
                 <?php if ($bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="registro.php">Registrarme</a>
+                        <a class="nav-link <?php if($current_page === 'registro') echo 'active'; ?>" href="registro.php">Registrarme</a>
                     </li>
                 <?php } ?>
                 <?php if ($bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="logueo.php">Iniciar sesión</a>
+                        <a class="nav-link <?php if($current_page === 'logueo') echo 'active'; ?>" aria-current="page" href="logueo.php">Iniciar sesión</a>
                     </li>
                 <?php } ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="error404.php">¿Quiénes somos?</a>
+                    <a class="nav-link <?php if($current_page === 'error404') echo 'active'; ?>" href="error404.php">¿Quiénes somos?</a>
                 </li>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">

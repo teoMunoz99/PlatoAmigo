@@ -6,6 +6,7 @@ if (!isset($_SESSION['user'])) {
 }
 $ruta = '../../';
 $color = '#0d6efd';
+$current_page = 'miPerfil';
 require_once 'components/encabezado.php';
 ?>
 
