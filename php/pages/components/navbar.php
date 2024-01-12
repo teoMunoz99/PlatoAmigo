@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['user'])) {
-    $bandera = false;
-} else {
-    $bandera = true;
-}
-?>
 <nav class="navbar bg-primary py-3 rounded-4 rounded-top-0" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="publicaciones.php"><i class="bi bi-suit-heart-fill text-danger"></i>
@@ -21,7 +13,12 @@ if (isset($_SESSION['user'])) {
                 </li>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php if($current_page === 'miPerfil') echo 'active'; ?>" href="miPerfil.php">Mi Perfil</a>
+                        <a class="nav-link <?php if($current_page === 'miPerfil') echo 'active'; ?>" href="miPerfil.php">Mis publicaciones</a>
+                    </li>
+                <?php } ?>
+                <?php if (!$bandera) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?php if($current_page === 'misDatos') echo 'active'; ?>" href="error404.php">Mis datos</a>
                     </li>
                 <?php } ?>
                 <?php if ($bandera) { ?>

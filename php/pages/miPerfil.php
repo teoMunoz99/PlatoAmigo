@@ -4,6 +4,7 @@ session_start();
 if (!isset($_SESSION['user'])) {
     header('refresh:0;url=logueo.php');
 }
+$bandera = false;
 $ruta = '../../';
 $color = '#0d6efd';
 $current_page = 'miPerfil';
@@ -11,12 +12,10 @@ require_once 'components/encabezado.php';
 ?>
 
 <body class="bg-color">
+    <header>
+        <?php require_once 'components/navbar.php'; ?>
+    </header>
     <main class="d-flex flex-column">
-        <!--Titulo-->
-        <a href="../../index.php" class='text-decoration-none'>
-            <h1 class='fw-bold text-center bg-primary text-white p-3 rounded-5 rounded-top-0'><i
-                    class="bi bi-suit-heart-fill text-danger"></i> PlatoAmigo</h1>
-        </a>
         <h2 class='fw-bold text-center'>Mis publicaciones</h2>
         <!--Publicaciones-->
         <section class='container'>
@@ -75,10 +74,11 @@ require_once 'components/encabezado.php';
                                                     </li>
                                                 </ul>
                                             </div>
-                                                <div class='d-flex'>
-                                                    <a href="eliminarP.php?id=<?php echo $id_plato;?>" class=""><i class="bi bi-x-circle-fill fs-1 me-2 text-danger"></i></a>
-                                                    <a href="error404.php" class=""><i class="bi bi-pencil-square fs-1 text-warning"></i></a>
-                                                </div>
+                                            <div class='d-flex'>
+                                                <a href="eliminarP.php?id=<?php echo $id_plato; ?>" class=""><i
+                                                        class="bi bi-x-circle-fill fs-1 me-2 text-danger"></i></a>
+                                                <a href="error404.php" class=""><i class="bi bi-pencil-square fs-1 text-warning"></i></a>
+                                            </div>
                                         </div>
                                     </article>
                                     <?php

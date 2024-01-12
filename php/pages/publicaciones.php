@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION['user'])) {
+    $bandera = false;
+} else {
+    $bandera = true;
+}
 $ruta = '../../';
 $color = '#0d6efd';
 //$color = '#f9e6df';
@@ -67,7 +73,7 @@ require_once 'components/encabezado.php';
                     <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
                 </form>
             </section>
-        <?php }*/ ?>
+        <?php }*/?>
         <!--Agregar platos-->
         <?php
         if (isset($_SESSION['user'])) {
