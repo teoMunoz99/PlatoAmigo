@@ -33,7 +33,7 @@ require_once 'components/encabezado.php';
         <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
         <!--Filtros (no mostrar si esta logueado)-->
         <?php
-        if (!isset($_SESSION['user'])) {
+        /*if (!isset($_SESSION['user'])) {
             ?>
             <section class='mt-3'>
                 <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
@@ -44,14 +44,30 @@ require_once 'components/encabezado.php';
                                 aria-label="Default select example">
                                 <option value="1">San Miguel de Tucumán</option>
                                 <option value="2">Yerba Buena</option>
-                                <option value="3">Three</option>
+                                <option value="Aguilares">Aguilares</option>
+                                <option value="Alderetes">Alderetes</option>
+                                <option value="Banda del Río Salí">Banda del Río Salí</option>
+                                <option value="Bella Vista">Bella Vista</option>
+                                <option value="Burruyacú">Burruyacú</option>
+                                <option value="Concepción">Concepción</option>
+                                <option value="Famaillá">Famaillá</option>
+                                <option value="Graneros">Graneros</option>
+                                <option value="Juan Bautista Alberdi">Juan Bautista Alberdi</option>
+                                <option value="La Cocha">La Cocha</option>
+                                <option value="Las Talitas">Las Talitas</option>
+                                <option value="Lules">Lules</option>
+                                <option value="Monteros">Monteros</option>
+                                <option value="Simoca">Simoca</option>
+                                <option value="Tafí del Valle">Tafí del Valle</option>
+                                <option value="Tafí Viejo">Tafí Viejo</option>
+                                <option value="Trancas">Trancas</option>
                             </select>
                         </div>
                     </fieldset>
                     <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
                 </form>
             </section>
-        <?php } ?>
+        <?php }*/ ?>
         <!--Agregar platos-->
         <?php
         if (isset($_SESSION['user'])) {
