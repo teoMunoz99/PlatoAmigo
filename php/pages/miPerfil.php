@@ -26,19 +26,16 @@ require_once 'components/encabezado.php';
             $conexion = conectar();
 
             if ($conexion) {
-                $consultaP = 'SELECT nombre, descripcion, fecha, id_localP FROM platos WHERE id_localP = ?';
+                $consultaP = 'SELECT id_plato, nombre, descripcion, fecha, id_localP FROM platos WHERE id_localP = ?';
                 $sentenciaP = mysqli_prepare($conexion, $consultaP);
                 mysqli_stmt_bind_param($sentenciaP, 'i', $_SESSION['id_local']);
                 $qP = mysqli_stmt_execute($sentenciaP);
 
                 if ($qP) {
-                    mysqli_stmt_bind_result($sentenciaP, $nombreP, $descripcionP, $fecha, $id_localP);
+                    mysqli_stmt_bind_result($sentenciaP, $id_plato, $nombreP, $descripcionP, $fecha, $id_localP);
                     mysqli_stmt_store_result($sentenciaP);
 
                     $cantidadP = mysqli_stmt_num_rows($sentenciaP);
-
-                    echo $cantidadP;
-                    echo $_SESSION['id_local'];
 
                     if ($cantidadP > 0) {
                         while (mysqli_stmt_fetch($sentenciaP)) {
@@ -79,7 +76,7 @@ require_once 'components/encabezado.php';
                                                 </ul>
                                             </div>
                                                 <div class='d-flex'>
-                                                    <a href="error404.php" class=""><i class="bi bi-x-circle-fill fs-1 me-2 text-danger"></i></a>
+                                                    <a href="eliminarP.php?id=<?php echo $id_plato;?>" class=""><i class="bi bi-x-circle-fill fs-1 me-2 text-danger"></i></a>
                                                     <a href="error404.php" class=""><i class="bi bi-pencil-square fs-1 text-warning"></i></a>
                                                 </div>
                                         </div>

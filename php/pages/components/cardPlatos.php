@@ -12,7 +12,7 @@
         </div>
         <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'A'){ ?>
         <div class='d-flex align-items-start'>
-            <a href="error404.php" class=""><i class="bi bi-x-circle-fill fs-1 text-danger"></i></a>
+            <a href="eliminarP.php?id=<?php echo $id_plato;?>" class=""><i class="bi bi-x-circle-fill fs-1 text-danger"></i></a>
         </div>
         <?php }?>
     </div>
