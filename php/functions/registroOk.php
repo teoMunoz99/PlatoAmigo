@@ -27,17 +27,21 @@ if (!empty($_POST['nombre']) && !empty($_POST['direccion']) && !empty($_POST['lo
             $_SESSION['tipo'] = $tipo;
             $_SESSION['id_local'] = $id_local;
             header('refresh:1;url=../pages/publicaciones.php');
+            $msj='Registro exitoso!';
             require_once '../pages/exito.php';
         } else {
             desconectar($conexion);
             header('refresh:1;url=../../index.php');
+            $msj='Fallo al registrar, intente mas tarde.';
             require_once 'fallo.php';
         }
     } else {
         header('refresh:1;url=../../index.php');
+        $msj='Fallo al registrar, intente mas tarde.';
         require_once 'fallo.php';
     }
 } else {
     header('refresh:1;url=../../index.php');
+    $msj='Fallo al registrar, intente mas tarde.';
     require_once 'fallo.php';
 }
