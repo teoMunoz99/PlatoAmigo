@@ -18,12 +18,6 @@ require_once 'components/encabezado.php';
         <?php require_once 'components/navbar.php'; ?>
     </header>
     <main class='container'>
-        <!--Saludo de usuario-->
-        <?php
-        if (isset($_SESSION['user'])) {
-            echo 'Hola: ' . $_SESSION['user'] . '';
-        }
-        ?>
         <!--Banner-->
         <section class='mt-3'>
             <?php require_once 'components/banner.php'; ?>
