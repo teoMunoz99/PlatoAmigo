@@ -18,7 +18,7 @@
                 <?php } ?>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php if($current_page === 'misDatos') echo 'active'; ?>" href="error404.php">Mis datos</a>
+                        <a class="nav-link <?php if($current_page === 'misDatos') echo 'active'; ?>" href="misDatos.php">Mis datos</a>
                     </li>
                 <?php } ?>
                 <?php if ($bandera) { ?>
