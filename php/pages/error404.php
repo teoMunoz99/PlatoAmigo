@@ -9,7 +9,7 @@ require_once 'components/encabezado.php';
     <main class="d-flex flex-column justify-content-center align-items-center container">
         <section class="text-center">
             <figure class='container'>
-                <img src="../../img/otros/error.png" class="w-100" alt="">
+                <img src="../../img/otros/error404.png" class="w-100" alt="">
                 <p class="text-secondary">Estamos trabajando en esto...</p>
             </figure>
         </section>

@@ -2,6 +2,7 @@
 session_start();
 //verifico si es que el usuario ya esta logueado
 if (!isset($_SESSION['user'])) {
+    include 'error404.php';
     header('refresh:0;url=logueo.php');
 } else {
     $bandera = false;
