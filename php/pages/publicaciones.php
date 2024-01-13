@@ -1,5 +1,6 @@
 <?php
 session_start();
+//verifico si el usuario esta logueado o no para mostrar las opciones en el navbar
 if (isset($_SESSION['user'])) {
     $bandera = false;
 } else {

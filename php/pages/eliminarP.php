@@ -1,7 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['user']) || empty($_GET['id'])) {
-    //header('refresh:0;url=../index.php');
+    include 'error404.php';
+    header('refresh:0;url=miPerfil.php');
 } else {
     $id = $_GET['id'];
     $ruta = '../../';
