@@ -3,20 +3,27 @@ session_start();
 if (!isset($_SESSION['user']) || empty($_POST)) {
   header('refresh:0;url=../index.php');
 } else {
+  $id_local = $_SESSION['id_local'];
   include 'conexion.php';
   $conexion = conectar();
   if ($conexion) {
     $nombre = $_POST['nombre'];
-    $pass = $_POST['pass'];
-    $tipo = $_POST['tipo'];
-    $consulta = 'UPDATE usuario SET usuario = ?, pass = ?, tipo = ? WHERE id_usuario = ?';
+    $direccion = $_POST['direccion'];
+    $localidad = $_POST['localidad'];
+    $cel = $_POST['telefono'];
+    $email = $_POST['email'];
+    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $consulta = 'UPDATE locales SET nombre = ?, direccion = ?, localidad = ?, cel = ?, correo = ?, pass = ?  WHERE id_local = ?';
     $sentencia = mysqli_prepare($conexion, $consulta);
-    mysqli_stmt_bind_param($sentencia, 'sssi', $usu, $pass, $tipo, $id);
+    mysqli_stmt_bind_param($sentencia, 'ssssssi', $nombre, $direccion, $localidad, $cel, $email, $pass, $id_local);
     $estado = mysqli_stmt_execute($sentencia);
     if ($estado) {
-      echo '<h3Actualizacion exitosa</h3>';
+      header('refresh:1;url=../pages/publicaciones.php');
+      include '../pages/mensajes/actualizacionExitosa.php';
     }
-  } else
-    echo '<h1 class="text-center fs-3 fw-bold text-bg-danger py-3">Faltan datos del formulario</h1>';
-  header('refresh:5, url=');
+  } else {
+    header('refresh:5;url=../pages/misDatos.php');
+    include '../pages/mensajes/actualizacionFallida.php';
+  }
 }
+?>

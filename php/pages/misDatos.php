@@ -30,6 +30,7 @@ require_once 'components/encabezado.php';
             mysqli_stmt_bind_result($sentencia, $nombre, $direccion, $localidad, $cel, $correo, $pass);
             if ($q) {
                 mysqli_stmt_fetch($sentencia);
+                desconectar($conexion);
                 // Muestro el formulario
                 ?>
                 <article class="container mb-4">
