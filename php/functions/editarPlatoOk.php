@@ -16,11 +16,13 @@ if (!isset($_SESSION['user']) || empty($_POST['nombrePlato']) || empty($_POST['d
     $estado = mysqli_stmt_execute($sentencia);
     if ($estado) {
       header('refresh:1;url=../pages/miPerfil.php');
-      include '../pages/mensajes/actualizacionExitosa.php';
+      $msj = '¡Plato actualizado!';
+      include '../pages/exito.php';
     }
   } else {
     header('refresh:5;url=../pages/miPerfil.php');
-    include '../pages/mensajes/actualizacionFallida.php';
+    $msj = 'Fallo al actualizar, intente mas tarde.';
+    include '../pages/fallo.php';
   }
 }
 ?>

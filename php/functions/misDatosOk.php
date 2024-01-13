@@ -19,11 +19,13 @@ if (!isset($_SESSION['user']) || empty($_POST)) {
     $estado = mysqli_stmt_execute($sentencia);
     if ($estado) {
       header('refresh:1;url=../pages/publicaciones.php');
-      include '../pages/mensajes/actualizacionExitosa.php';
+      $msj = '¡Datos actualizados!';
+      include '../pages/exito.php';
     }
   } else {
     header('refresh:5;url=../pages/misDatos.php');
-    include '../pages/mensajes/actualizacionFallida.php';
+    $msj = 'Fallo al actualizar datos, intente mas tarde';
+    include '../pages/fallo.php';
   }
 }
 ?>
