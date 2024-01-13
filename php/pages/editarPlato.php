@@ -9,7 +9,6 @@ if (!isset($_SESSION['user']) || empty($_GET['id'])) {
     $ruta = '../../';
     $color = '#0d6efd';
     $current_page = 'miPerfil';
-    $id_plato = $_GET['id'];
     require_once 'components/encabezado.php';
     ?>
 
@@ -19,8 +18,8 @@ if (!isset($_SESSION['user']) || empty($_GET['id'])) {
         </header>
         <main>
             <?php
-            //Guardo el id del local logueado
-            $idLocal = $_SESSION['id_local'];
+            //Guardo el id del plato
+            $id_plato = $_GET['id'];
             include '../functions/conexion.php';
             $conexion = conectar();
             if ($conexion) {
@@ -37,17 +36,19 @@ if (!isset($_SESSION['user']) || empty($_GET['id'])) {
                     ?>
                     <article class="container mb-4">
                         <form class="bg-light border rounded-5 p-3" action="../functions/editarPlatoOk.php" method="post">
+                            <input type="hidden" name="id_plato" value="<?php echo $id_plato; ?>">
                             <fieldset>
                                 <legend class="text-center mb-4 fw-bold">Editar plato</legend>
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Nombre del local</label>
-                                    <input type="text" class="form-control rounded-pill py-3" name="nombre" id="name" minlength="3"
-                                        maxlength="15" value="<?php echo $nombre; ?>" required>
+                                    <label for="name" class="form-label">Nombre del plato</label>
+                                    <input type="text" class="form-control rounded-pill py-3" name="nombrePlato"
+                                        value="<?php echo $nombre; ?>" id="name" minlength="3" maxlength="30">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="direc" class="form-label">Descripción</label>
-                                    <input type="text" class="form-control rounded-pill py-3" minlength="5" maxlength="45"
-                                        name="direccion" id="direc" value="<?php echo $descripcion; ?>" required>
+                                    <label class='form-label' for="floatingTextarea2">Descripción</label>
+                                    <textarea class="form-control rounded-5" name="descripcion"
+                                        placeholder="Eje: 3 porciones de pizza muzarella" id="floatingTextarea2"
+                                        style="height: 100px" maxlength='100'><?php echo $descripcion; ?></textarea>
                                 </div>
                             </fieldset>
                             <button type="submit" class="btn btn-primary rounded-pill py-3">Actualizar</button>
