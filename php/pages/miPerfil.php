@@ -78,7 +78,7 @@ if (!isset($_SESSION['user'])) {
                                                 <div class='d-flex'>
                                                     <a href="eliminarP.php?id=<?php echo $id_plato; ?>" class=""><i
                                                             class="bi bi-x-circle-fill fs-1 me-2 text-danger"></i></a>
-                                                    <a href="error404.php" class=""><i class="bi bi-pencil-square fs-1 text-warning"></i></a>
+                                                    <a href="editarPlato.php?id=<?php echo $id_plato; ?>" class=""><i class="bi bi-pencil-square fs-1 text-warning"></i></a>
                                                 </div>
                                             </div>
                                         </article>

@@ -109,7 +109,7 @@ if (!isset($_SESSION['user']) || !isset($_SESSION['id_local'])) {
                     <?php
                 } else {
                     desconectar($conexion);
-                    header("refresh:3;url=usuario_listado.php");
+                    header("refresh:3;url=publicaciones.php");
                     echo '<p class="fs-3 fw-bold text-center text-bg-danger">Ocurrió un error ejecutando la sentencia</p>';
                 }
             }
