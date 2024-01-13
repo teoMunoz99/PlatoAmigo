@@ -19,15 +19,18 @@ if (!empty($_POST['nombrePlato']) && !empty($_POST['descripcion'])) {
         desconectar($conexion);
         if ($q) {
             header("refresh:1;url=../pages/publicaciones.php");
-            include '../pages/mensajes/cargaExitosa.php';
+            $msj = '¡Plato cargado!';
+            include '../pages/exito.php';
         } else {
             header("refresh:1;url=../pages/publicaciones.php");
-            include '../pages/mensajes/cargaFallida.php';
+            $msj = 'Fallo al cargar el plato, intente mas tarde.';
+            include '../pages/fallo.php';
         }
     } else {
         //error en la conexion a la db
         header("refresh:1;url=../pages/publicaciones.php");
-        include '../pages/mensajes/cargaFallida.php';
+        $msj = 'Fallo al cargar el plato, intente mas tarde.';
+        include '../pages/fallo.php';
     }
 } else {
     header("refresh:0;url=../pages/agregarPlato.php");

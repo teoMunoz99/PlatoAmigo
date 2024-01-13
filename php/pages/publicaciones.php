@@ -18,6 +18,27 @@ require_once 'components/encabezado.php';
         <?php require_once 'components/navbar.php'; ?>
     </header>
     <main class='container'>
+        <!--Saludo al user-->
+        <?php
+        include '../functions/conexion.php';
+        if(!$bandera){
+            $conexion1 = conectar();
+            if ($conexion1) {
+                // Recolecto los datos del usuario
+                $consulta = "SELECT nombre FROM locales WHERE id_local=?";
+                $sentencia = mysqli_prepare($conexion1, $consulta);
+                mysqli_stmt_bind_param($sentencia, 'i', $_SESSION['id_local']);
+                $q = mysqli_stmt_execute($sentencia);
+                mysqli_stmt_bind_result($sentencia, $nombre);
+                if ($q) {
+                    mysqli_stmt_fetch($sentencia);
+                    desconectar($conexion1);
+                    // Muestro el formulario
+                    echo '<p>Hola:'. $nombre.'</p>';
+                }
+            }
+        }
+        ?>
         <!--Banner-->
         <section class='mt-3'>
             <?php require_once 'components/banner.php'; ?>
@@ -85,7 +106,7 @@ require_once 'components/encabezado.php';
         <!--Publicaciones-->
         <section class=''>
             <?php
-            include '../functions/conexion.php';
+            //include '../functions/conexion.php';
 
             $conexion = conectar();
 
