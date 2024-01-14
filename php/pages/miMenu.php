@@ -54,6 +54,19 @@ if (!isset($_SESSION['user'])) {
                             while (mysqli_stmt_fetch($sentenciaP)) {
                                 ?>
                                 <!--Dibujar card menu-->
+                                <article class="card rounded-5 p-2 my-3">
+                                    <div class="card-body d-flex">
+                                        <div class='w-100 me-4'>
+                                            <h5 class="card-title">
+                                                <?php echo $nombreP; ?>
+                                            </h5>
+                                            <p class="card-text">
+                                                <?php echo $descripcionP; ?>
+                                            </p>
+                                            <p>Precio: $<?php echo $precio; ?></p>
+                                        </div>
+                                    </div>
+                                </article>
                                 <?php
                             }
                         } else {
