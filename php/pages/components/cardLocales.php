@@ -12,9 +12,9 @@
                     <?php echo $celL; ?>
                 </li>
             </ul>
-            <div class="d-flex justify-content-end">
-                <a href="#" class="btn btn-danger rounded-pill">Ver menú</a>
-            </div>
         </div>
+    </div>
+    <div class="d-grid gap-2 p-3">
+        <button class="btn btn-primary rounded-pill" type="button">Ver menú</button>
     </div>
 </article>
