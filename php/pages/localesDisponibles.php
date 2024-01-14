@@ -9,7 +9,7 @@ if (isset($_SESSION['user'])) {
 $ruta = '../../';
 $color = '#0d6efd';
 //$color = '#f9e6df';
-$current_page = 'publicaciones';
+$current_page = 'localesDisponibles';
 require_once 'components/encabezado.php';
 ?>
 
@@ -18,78 +18,8 @@ require_once 'components/encabezado.php';
         <?php require_once 'components/navbar.php'; ?>
     </header>
     <main class='container'>
-        <!--Saludo al user-->
-        <?php
-        include '../functions/conexion.php';
-        if(!$bandera){
-            $conexion1 = conectar();
-            if ($conexion1) {
-                // Recolecto los datos del usuario
-                $consulta = "SELECT nombre FROM locales WHERE id_local=?";
-                $sentencia = mysqli_prepare($conexion1, $consulta);
-                mysqli_stmt_bind_param($sentencia, 'i', $_SESSION['id_local']);
-                $q = mysqli_stmt_execute($sentencia);
-                mysqli_stmt_bind_result($sentencia, $nombre);
-                if ($q) {
-                    mysqli_stmt_fetch($sentencia);
-                    desconectar($conexion1);
-                    // Muestro el formulario
-                    echo '<p>Hola:'. $nombre.'</p>';
-                }
-            }
-        }
-        ?>
-        <!--Banner-->
-        <section class='mt-3'>
-            <?php require_once 'components/banner.php'; ?>
-        </section>
-        <!--Botones principales-->
-        <section class="mt-3">
-            <?php require_once 'components/botonesPrincipales.php'; ?>
-        </section>
-        <!--Objetivo semanal-->
-        <section class='mt-3'>
-            <?php require_once 'components/objetivosSemanales.php'; ?>
-        </section>
         <!--Titulo-->
-        <h2 class='text-center fs-1 fw-bold mt-4'>Platos disponibles</h2>
-        <!--Filtros (no mostrar si esta logueado)-->
-        <?php
-        /*if (!isset($_SESSION['user'])) {
-            ?>
-            <section class='mt-3'>
-                <h5 class="fw-bold"><i class="bi bi-geo-alt-fill"></i> Filtrar por ubicacion</h5>
-                <form class="d-flex" action="" method="get">
-                    <fieldset>
-                        <div class="me-2">
-                            <select class="form-select rounded-pill py-3" id="ubi" name="zona"
-                                aria-label="Default select example">
-                                <option value="1">San Miguel de Tucumán</option>
-                                <option value="2">Yerba Buena</option>
-                                <option value="Aguilares">Aguilares</option>
-                                <option value="Alderetes">Alderetes</option>
-                                <option value="Banda del Río Salí">Banda del Río Salí</option>
-                                <option value="Bella Vista">Bella Vista</option>
-                                <option value="Burruyacú">Burruyacú</option>
-                                <option value="Concepción">Concepción</option>
-                                <option value="Famaillá">Famaillá</option>
-                                <option value="Graneros">Graneros</option>
-                                <option value="Juan Bautista Alberdi">Juan Bautista Alberdi</option>
-                                <option value="La Cocha">La Cocha</option>
-                                <option value="Las Talitas">Las Talitas</option>
-                                <option value="Lules">Lules</option>
-                                <option value="Monteros">Monteros</option>
-                                <option value="Simoca">Simoca</option>
-                                <option value="Tafí del Valle">Tafí del Valle</option>
-                                <option value="Tafí Viejo">Tafí Viejo</option>
-                                <option value="Trancas">Trancas</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="btn btn-primary rounded-pill px-4"><i class="bi bi-search"></i></button>
-                </form>
-            </section>
-        <?php }*/?>
+        <h2 class='text-center fs-1 fw-bold mt-4'>Locales disponibles</h2>
         <!--Agregar platos-->
         <?php
         if (isset($_SESSION['user'])) {
@@ -106,8 +36,7 @@ require_once 'components/encabezado.php';
         <!--Publicaciones-->
         <section class=''>
             <?php
-            //include '../functions/conexion.php';
-
+            include '../functions/conexion.php';
             $conexion = conectar();
 
             if ($conexion) {
