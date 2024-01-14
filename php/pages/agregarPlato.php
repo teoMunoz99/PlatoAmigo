@@ -8,6 +8,7 @@ if (!isset($_SESSION['user'])) {
     $ruta = '../../';
     $color = '#0d6efd';
     //$color = '#f9e6df';
+    $bandera = false;
     require_once 'components/encabezado.php';
     ?>
 

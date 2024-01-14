@@ -18,6 +18,11 @@
                 <?php } ?>
                 <?php if (!$bandera) { ?>
                     <li class="nav-item">
+                        <a class="nav-link <?php if($current_page === 'miMenu') echo 'active'; ?>" href="miMenu.php">Mi menú</menu></a>
+                    </li>
+                <?php } ?>
+                <?php if (!$bandera) { ?>
+                    <li class="nav-item">
                         <a class="nav-link <?php if($current_page === 'misDatos') echo 'active'; ?>" href="misDatos.php">Mis datos</a>
                     </li>
                 <?php } ?>
