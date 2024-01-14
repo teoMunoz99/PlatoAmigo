@@ -17,7 +17,7 @@
         </div>
         Eventos
     </a>
-    <a href="error404.php" class='text-center text-decoration-none text-dark fw-bold'>
+    <a href="localesDisponibles.php" class='text-center text-decoration-none text-dark fw-bold'>
         <div class='btn btn-primary btn-p m-1 rounded-4 d-flex justify-content-center align-items-center'>
             <i class="bi bi-coin icono-btn"></i>
         </div>
