@@ -41,7 +41,7 @@ if (!isset($_SESSION['user']) || !isset($_SESSION['id_local'])) {
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Nombre del local</label>
                                     <input type="text" class="form-control rounded-pill py-3" name="nombre" id="name" minlength="3"
-                                        maxlength="15" value="<?php echo $nombre; ?>" required>
+                                        maxlength="30" value="<?php echo $nombre; ?>" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="direc" class="form-label">Dirección</label>
